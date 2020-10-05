@@ -52,12 +52,12 @@
       </div>
     </div>
 
-    <div *ngFor="let item of allEvent" class="row">
-      
-      <div>{{item.date | date : 'medium'}}</div> - 
-      <div>{{item.event_name}}</div>
+    <div *ngIf="allEvent.length" class="row events-list">
+      <ng-container *ngFor="let item of allEvent">
+        <div>{{item.date | date : 'medium'}}</div> - 
+        <div>{{item.event_name}}</div>
+      </ng-container>
     </div>
-
   </div>
 
 
